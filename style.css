@@ -1,0 +1,85 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(2,37,78,1) 0%, rgba(4,56,126,1) 19.7%, rgba(85,245,221,1) 100.2% ); */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gameInfo{
+    color: antiquewhite;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 3rem;
+    border-radius: 1rem; 
+    border: 1px solid rgba(255, 255, 255, 0.15) ;
+}
+.tic-tak-toe{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem; 
+    border: 1px solid rgba(255, 255, 255, 0.15) ;
+    border-radius: 1rem;
+    padding: 2rem;
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    color: darkgrey;
+    cursor: pointer;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.box1,.box2,.box4,.box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.box3,.box6{
+    border-bottom: 2px solid white
+}
+.box7,.box8{
+    border-right: 2px solid white;
+}
+
+.newGame{
+    all: unset;
+    display: none;
+    color: antiquewhite;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 3rem;
+    border-radius: 1rem; 
+    border: 1px solid rgba(255, 255, 255, 0.15) ;
+    cursor: pointer;
+}
+.newGame.active{
+    display: flex;
+}
+.win{
+    background-color: rgb(177, 198, 136);
+    color: aliceblue;
+}
